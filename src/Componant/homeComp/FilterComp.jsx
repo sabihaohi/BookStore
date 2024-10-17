@@ -11,7 +11,7 @@ const FilterComponent = ({ onFilterChange, genres }) => {
     };
 
     return (
-        <div className="p-4 bg-white shadow-md rounded-md max-w-sm mx-auto"> {/* Added max-w-sm for width limit and mx-auto for centering */}
+        <div className="p-4 bg-white shadow-md rounded-md max-w-sm mx-auto border"> {/* Added max-w-sm for width limit and mx-auto for centering */}
             <h3 className="text-lg font-bold mb-4">Filter by Topic</h3>
             <select
                 value={selectedCategory}

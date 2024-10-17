@@ -31,7 +31,7 @@ const EachBook = ({ book }) => {
   return (
     <div
       onClick={handleBookClick} // Add onClick event to handle navigation
-      className="w-full sm:w-60 md:w-48 min-h-[20rem] rounded-lg overflow-hidden shadow-lg bg-white relative flex flex-col cursor-pointer hover:scale-105 hover:shadow-pink-300 hover:shadow-md transition-all duration-200"
+      className="w-full sm:w-60 md:w-48 lg:w-56 min-h-[20rem] rounded-lg overflow-hidden bg-white relative flex flex-col cursor-pointer hover:scale-105 hover:shadow-pink-300 hover:shadow-md transition-all duration-200 border shadow-gray-100 shadow-xl"
     >
       {/* Book Cover Image */}
       <div className="h-48 w-full flex justify-center items-center p-2">
@@ -49,13 +49,15 @@ const EachBook = ({ book }) => {
             {title}
           </h2>
           <p className="text-xs text-gray-600 mb-1">
-            {authors.length > 0 ? authors[0].name : "Unknown Author"}
+            Author : {authors.length > 0 ? authors[0].name : "Unknown Author"}
           </p>
-          <p className="text-xs text-gray-500 mb-1">Genre: {genre}</p>
+          <p className="text-xs text-gray-500 mb-1">Genre: {genre}</p> 
+          <p className="text-xs text-gray-500 mb-1">ID: {id}</p> 
+          
         </div>
         <div className="text-center mt-auto">
           <button className="bg-pink-200 text-gray-800 px-6 py-2 rounded hover:bg-gray-300 flex items-center mb-2 mt-2">
-            <FaHeart className="mr-2 text-red-400" /> Add to wishlist
+            <FaHeart className=" mr-1 mt-0.5 text-red-400" /> Add to wishlist
           </button>
         </div>
       </div>
